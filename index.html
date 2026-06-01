@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>英语老师 · 云端课堂 | 李老师个人教学网站</title>
-    <!-- 使用优雅的谷歌字体 & Font Awesome 6 (免费图标库) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -14,7 +13,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f9fafc;
@@ -22,24 +20,18 @@
             line-height: 1.5;
             scroll-behavior: smooth;
         }
-
-        /* 容器公用 */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
         }
-
-        /* 头部导航 */
         header {
             background: white;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(0px);
         }
-
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -47,7 +39,6 @@
             padding: 16px 0;
             flex-wrap: wrap;
         }
-
         .logo h1 {
             font-size: 1.7rem;
             font-weight: 700;
@@ -55,34 +46,24 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.3px;
         }
-
         .logo p {
             font-size: 0.8rem;
             color: #5b6e8c;
-            font-weight: 500;
         }
-
         .nav-links {
             display: flex;
             gap: 28px;
             align-items: center;
         }
-
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
             color: #334155;
-            transition: color 0.2s;
-            font-size: 1rem;
         }
-
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover {
             color: #2b6e4f;
         }
-
         .btn-outline {
             border: 1.5px solid #2b6e4f;
             background: transparent;
@@ -90,21 +71,16 @@
             border-radius: 40px;
             color: #2b6e4f;
             font-weight: 600;
-            transition: 0.2s;
         }
-
         .btn-outline:hover {
             background: #2b6e4f;
             color: white;
         }
-
-        /* 英雄区 */
         .hero {
             background: linear-gradient(120deg, #eef7f1 0%, #ffffff 80%);
             padding: 60px 0 48px;
             border-bottom: 1px solid #e2e8f0;
         }
-
         .hero-grid {
             display: flex;
             flex-wrap: wrap;
@@ -112,11 +88,9 @@
             justify-content: space-between;
             gap: 40px;
         }
-
         .hero-text {
             flex: 1;
         }
-
         .hero-text .badge {
             background: #d9f0e3;
             color: #1e6f3f;
@@ -127,7 +101,6 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
-
         .hero-text h2 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -135,59 +108,43 @@
             margin-bottom: 20px;
             color: #0f2b1f;
         }
-
         .hero-text p {
             font-size: 1.1rem;
             color: #475569;
             max-width: 550px;
             margin-bottom: 28px;
         }
-
         .hero-stats {
             display: flex;
             gap: 28px;
             margin-top: 20px;
         }
-
         .stat span {
             font-size: 1.8rem;
             font-weight: 800;
             color: #2b6e4f;
         }
-
         .hero-img {
             flex: 0.8;
             text-align: center;
         }
-
         .hero-img img {
             max-width: 100%;
             border-radius: 48px;
             box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
         }
-
-        /* 资源区域 (文件和练习题) */
         .resources-section {
             padding: 70px 0;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 48px;
         }
-
         .section-header h3 {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 12px;
         }
-
-        .section-header p {
-            color: #5b6e8c;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         .filter-bar {
             display: flex;
             justify-content: center;
@@ -195,7 +152,6 @@
             flex-wrap: wrap;
             margin-bottom: 48px;
         }
-
         .filter-btn {
             background: white;
             border: none;
@@ -203,64 +159,46 @@
             border-radius: 40px;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.2s;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            font-family: inherit;
-            font-size: 0.9rem;
             border: 1px solid #e2e8f0;
         }
-
         .filter-btn.active, .filter-btn:hover {
             background: #2b6e4f;
             color: white;
-            border-color: #2b6e4f;
         }
-
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 28px;
         }
-
         .resource-card {
             background: white;
             border-radius: 28px;
             padding: 24px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
             border: 1px solid #edf2f7;
         }
-
         .resource-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
         }
-
         .card-icon {
             font-size: 2.2rem;
             margin-bottom: 14px;
             color: #2b6e4f;
         }
-
         .resource-card h4 {
             font-size: 1.35rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
-
         .resource-meta {
             display: flex;
             gap: 16px;
             font-size: 0.8rem;
             color: #6c7a91;
             margin: 12px 0;
-            flex-wrap: wrap;
         }
-
-        .resource-meta span i {
-            margin-right: 4px;
-        }
-
         .tag {
             background: #eef2ff;
             padding: 4px 12px;
@@ -268,102 +206,66 @@
             font-size: 0.7rem;
             font-weight: 600;
             color: #2c5f8a;
+            display: inline-block;
         }
-
         .card-actions {
             margin-top: 20px;
             display: flex;
             gap: 12px;
-            justify-content: flex-start;
         }
-
         .btn-preview, .btn-download {
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
             padding: 8px 18px;
             border-radius: 40px;
-            transition: 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 6px;
         }
-
         .btn-preview {
             background: #f1f5f9;
             color: #1e293b;
         }
-
-        .btn-preview:hover {
-            background: #e2e8f0;
-        }
-
         .btn-download {
             background: #2b6e4f;
             color: white;
         }
-
-        .btn-download:hover {
-            background: #1f5a40;
-        }
-
-        .empty-msg {
-            text-align: center;
-            padding: 50px;
-            background: #f8fafc;
-            border-radius: 40px;
-            color: #64748b;
-        }
-
-        /* 关于老师 + 联系方式 */
         .about-section {
             background: #ffffff;
             padding: 60px 0;
             border-top: 1px solid #eef2f6;
             border-bottom: 1px solid #eef2f6;
         }
-
         .about-wrapper {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
             align-items: center;
         }
-
         .about-text {
             flex: 1.2;
         }
-
         .about-text h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
         }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: #334155;
-        }
-
         .contact-info {
             margin-top: 28px;
             background: #f9f9fc;
             padding: 24px;
             border-radius: 28px;
         }
-
         .contact-info p {
             margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
         .contact-info i {
             width: 28px;
             color: #2b6e4f;
-            font-size: 1.2rem;
         }
-
         .about-image {
             flex: 0.9;
             background: #e2f0e9;
@@ -371,79 +273,20 @@
             padding: 20px;
             text-align: center;
         }
-
         .about-image img {
             max-width: 100%;
             border-radius: 28px;
         }
-
-        /* 上传区域（仅管理员示意，实际可配合后端，此处演示前端模拟添加） */
-        .upload-card {
-            background: #fefce8;
-            border: 1px solid #ffe6b3;
-            border-radius: 28px;
-            padding: 28px;
-            margin-top: 40px;
-        }
-
-        .upload-card h4 {
-            margin-bottom: 12px;
-        }
-
-        .demo-upload-area {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .demo-input {
-            flex: 1;
-            padding: 12px 16px;
-            border-radius: 60px;
-            border: 1px solid #cbd5e1;
-            font-family: inherit;
-        }
-
-        .demo-btn {
-            background: #2b6e4f;
-            border: none;
-            padding: 0 24px;
-            border-radius: 60px;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .demo-btn:hover {
-            background: #1f5a40;
-        }
-
-        .note {
-            font-size: 0.75rem;
-            margin-top: 12px;
-            color: #8b6b3d;
-        }
-
         footer {
             background: #0f2b1f;
             color: #cbd5e6;
             padding: 32px 0;
             text-align: center;
         }
-
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .hero-text h2 {
-                font-size: 2rem;
-            }
-            .hero-grid {
-                flex-direction: column;
-            }
+            .navbar { flex-direction: column; gap: 12px; }
+            .hero-text h2 { font-size: 2rem; }
+            .hero-grid { flex-direction: column; }
         }
     </style>
 </head>
@@ -457,7 +300,7 @@
                 <p>📖 让英语学习 · 触手可及</p>
             </div>
             <div class="nav-links">
-                <a href="#resources" class="active">📚 资源库</a>
+                <a href="#resources">📚 资源库</a>
                 <a href="#about">👩‍🏫 关于我</a>
                 <a href="#contact" class="btn-outline">📧 联系老师</a>
             </div>
@@ -466,7 +309,6 @@
 </header>
 
 <main>
-    <!-- 英雄区 Hero -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
@@ -480,50 +322,21 @@
                 </div>
             </div>
             <div class="hero-img">
-                <!-- 插画风格图，来自unsplash 免费占位，实际可替换 -->
                 <img src="https://placehold.co/600x400/eef2f0/2b6e4f?text=English+Learning+Materials&font=montserrat" alt="英语教学示意">
             </div>
         </div>
     </section>
 
-    <!-- 资源展示区域（文件+练习题） -->
     <section id="resources" class="resources-section">
         <div class="container">
             <div class="section-header">
                 <h3>📂 教学资源库</h3>
-                <p>课件、练习题、听力音频、试卷一键下载，支持分类筛选</p>
+                <p>课件、练习题、听力音频、试卷一键下载</p>
             </div>
-            <!-- 筛选按钮 -->
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="exercise">📝 练习题</button>
-                <button class="filter-btn" data-filter="file">📄 教学文件</button>
-                <button class="filter-btn" data-filter="exam">📋 测试卷</button>
-            </div>
-            <!-- 动态卡片网格 -->
-            <div id="resourceGrid" class="resource-grid">
-                <!-- 动态生成js加载 -->
-            </div>
-
-            <!-- 小提示：教师可直接在下方快速添加新资源（演示前端添加）展示灵活性 -->
-            <div class="upload-card" id="uploadDemo">
-                <h4><i class="fas fa-cloud-upload-alt"></i> 快速上传新资料（教师演示）</h4>
-                <p>方便课后即时分享最新练习或文件，所有新增资源会立即展示在上方。</p>
-                <div class="demo-upload-area">
-                    <input type="text" id="resourceName" class="demo-input" placeholder="资源名称，例如：虚拟语气专项练习.pdf" autocomplete="off">
-                    <select id="resourceType" class="demo-input" style="width: auto;">
-                        <option value="exercise">练习题</option>
-                        <option value="file">教学文件</option>
-                        <option value="exam">测试卷</option>
-                    </select>
-                    <button id="addResourceBtn" class="demo-btn"><i class="fas fa-plus"></i> 添加资源</button>
-                </div>
-                <div class="note">💡 提示：这是一个独立前端演示版，真实上线后可对接云存储/后端。目前新增资源保存在浏览器本地会话中，刷新不清除（localStorage模拟）。</div>
-            </div>
+            <div id="resourceGrid" class="resource-grid"></div>
         </div>
     </section>
 
-    <!-- 关于老师 + 联系方式（个人宣传） -->
     <section id="about" class="about-section">
         <div class="container about-wrapper">
             <div class="about-text">
@@ -535,6 +348,7 @@
                     <p><i class="fab fa-weixin"></i> 微信: EnglishMsLi (添加请备注“学生/家长”)</p>
                     <p><i class="fab fa-bilibili"></i> B站: @李老师的英语课堂</p>
                     <p><i class="fas fa-phone-alt"></i> 工作电话: 138-1234-5678</p>
+                    <p><i class="fas fa-download"></i> 百度网盘提取码：<strong>ijvy</strong></p>
                 </div>
             </div>
             <div class="about-image">
@@ -553,64 +367,31 @@
 </footer>
 
 <script>
-    // ---------- 教学资源数据 (文件+练习题) ----------
-    // 为了方便演示，预置一批丰富数据，涵盖类型
+    // 教学资源数据：百度网盘合集
     let resourcesData = [
-        { id: 1, name: "定语从句Day1练习题", type: "exercise", size: "54 KB", date: "2026-06-02", fileUrl: "https://eim2.oss-cn-guangzhou.aliyuncs.com/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5%E7%BB%83%E4%B9%A0%E9%A2%98Day%201-5/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5%20Day%201.docx", icon: "fa-file-word" },
-        { id: 2, name: "高中英语虚拟语气精讲讲义.pdf", type: "file", size: "2.1 MB", date: "2025-01-22", fileUrl: "#", icon: "fa-file-pdf" },
-        { id: 3, name: "雅思写作Task2 高分模板+范文集", type: "file", size: "3.4 MB", date: "2025-02-18", fileUrl: "#", icon: "fa-file-word" },
-        { id: 4, name: "定语从句关系代词练习题（含解析）", type: "exercise", size: "890 KB", date: "2025-02-05", fileUrl: "#", icon: "fa-file-alt" },
-        { id: 5, name: "2025 一模模拟英语测试卷 (听力+笔试)", type: "exam", size: "4.2 MB", date: "2025-02-20", fileUrl: "#", icon: "fa-file-pdf" },
-        { id: 6, name: "小升初英语衔接每日一练(21天)", type: "exercise", size: "1.5 MB", date: "2025-01-15", fileUrl: "#", icon: "fa-file-pdf" },
-        { id: 7, name: "英语48个音标速记表+练习题", type: "file", size: "2.0 MB", date: "2025-02-01", fileUrl: "#", icon: "fa-file-image" },
-        { id: 8, name: "高考英语读后续写语料库", type: "file", size: "1.8 MB", date: "2025-02-12", fileUrl: "#", icon: "fa-file-pdf" },
-        { id: 9, name: "词汇语境填空100题（中考难度）", type: "exercise", size: "1.1 MB", date: "2025-02-14", fileUrl: "#", icon: "fa-file-alt" },
-        { id: 10, name: "月考冲刺·英语完形填空特训", type: "exam", size: "980 KB", date: "2025-02-19", fileUrl: "#", icon: "fa-file-pdf" }
-    ];
-
-    // 为了演示持久性新增，localStorage读取
-    function loadFromStorage() {
-        const stored = localStorage.getItem("englishTeacherResources");
-        if(stored) {
-            try {
-                let parsed = JSON.parse(stored);
-                if(Array.isArray(parsed) && parsed.length) resourcesData = parsed;
-            } catch(e) {}
-        } else {
-            // 初次存入预设
-            localStorage.setItem("englishTeacherResources", JSON.stringify(resourcesData));
+        {
+            id: 1,
+            name: "📁 EIM2 专项练习全套（百度网盘）",
+            type: "file",
+            size: "持续更新",
+            date: "2026-06-02",
+            fileUrl: "https://pan.baidu.com/s/1VSQFcIsPZVr9HY5khHlbgg",
+            icon: "fa-folder-open"
         }
-    }
-
-    function saveToStorage() {
-        localStorage.setItem("englishTeacherResources", JSON.stringify(resourcesData));
-    }
-
-    // 渲染卡片
-    let currentFilter = "all";
+    ];
 
     function renderResources() {
         const grid = document.getElementById("resourceGrid");
-        if(!grid) return;
-        let filtered = resourcesData.filter(item => {
-            if(currentFilter === "all") return true;
-            return item.type === currentFilter;
-        });
-
-        if(filtered.length === 0) {
-            grid.innerHTML = `<div class="empty-msg"><i class="fas fa-folder-open"></i> 暂时没有此类资源，请稍后来查看～<br>老师会持续上传更多干货！</div>`;
-            return;
-        }
-
+        if (!grid) return;
         let html = "";
-        filtered.forEach(res => {
+        resourcesData.forEach(res => {
             let typeLabel = "";
-            if(res.type === "exercise") typeLabel = "📝 练习题";
-            else if(res.type === "file") typeLabel = "📄 教学文件";
-            else if(res.type === "exam") typeLabel = "📋 测试卷";
+            if (res.type === "exercise") typeLabel = "📝 练习题";
+            else if (res.type === "file") typeLabel = "📄 教学文件";
+            else if (res.type === "exam") typeLabel = "📋 测试卷";
             let iconClass = res.icon || "fa-file-pdf";
             html += `
-                <div class="resource-card" data-id="${res.id}">
+                <div class="resource-card">
                     <div class="card-icon"><i class="fas ${iconClass}"></i></div>
                     <h4>${escapeHtml(res.name)}</h4>
                     <div class="resource-meta">
@@ -618,123 +399,43 @@
                         <span><i class="fas fa-database"></i> ${res.size || "未知大小"}</span>
                         <span><i class="far fa-calendar-alt"></i> ${res.date || "近期"}</span>
                     </div>
-                    <div class="tag"><i class="fas fa-download"></i> 可下载 / 预览</div>
+                    <div class="tag"><i class="fas fa-download"></i> 百度网盘 · 提取码 ijvy</div>
                     <div class="card-actions">
-                        <a href="${res.fileUrl}" class="btn-preview" target="_blank"><i class="fas fa-eye"></i> 预览</a>
-                        <a href="${res.fileUrl}" class="btn-download" download="${res.name}"><i class="fas fa-download"></i> 下载</a>
+                        <a href="${res.fileUrl}" class="btn-download" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i> 打开网盘</a>
                     </div>
                 </div>
             `;
         });
         grid.innerHTML = html;
-        // 因为没有实际文件链接，为避免所有链接无效，增加提醒：demo中点击会展示提示，实际使用时老师可上传真实文件替换fileUrl
-        const allPreviewBtns = document.querySelectorAll('.btn-preview, .btn-download');
-        allPreviewBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                if(btn.getAttribute('href') === '#' || btn.getAttribute('href') === '#') {
-                    e.preventDefault();
-                    alert('📢 这是一份演示资源，正式版本中会链接到真实的PDF/文档。您也可以将文件上传至服务器后替换资源链接。如需获取此资料，请联系李老师免费领取电子版。');
-                }
-            });
-        });
     }
 
-    // 辅助函数防XSS
     function escapeHtml(str) {
         return str.replace(/[&<>]/g, function(m) {
-            if(m === '&') return '&amp;';
-            if(m === '<') return '&lt;';
-            if(m === '>') return '&gt;';
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
             return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
         });
     }
 
-    // 添加新资源
-    function addResource(name, type) {
-        if(!name.trim()) {
-            alert("请填写资源名称");
-            return false;
-        }
-        let newId = Date.now();
-        let newResource = {
-            id: newId,
-            name: name.trim(),
-            type: type,
-            size: "0.6 MB",
-            date: new Date().toISOString().slice(0,10),
-            fileUrl: "#",
-            icon: type === 'exercise' ? 'fa-file-alt' : (type === 'exam' ? 'fa-file-pdf' : 'fa-file-pdf')
-        };
-        resourcesData.unshift(newResource);
-        saveToStorage();
-        // 刷新当前视图
+    function init() {
         renderResources();
-        return true;
-    }
-
-    // 筛选绑定
-    function bindFilters() {
-        const btns = document.querySelectorAll('.filter-btn');
-        btns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                btns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                currentFilter = this.getAttribute('data-filter');
-                renderResources();
-            });
-        });
-    }
-
-    // 上传demo交互
-    function bindUpload() {
-        const addBtn = document.getElementById('addResourceBtn');
-        const nameInput = document.getElementById('resourceName');
-        const typeSelect = document.getElementById('resourceType');
-        if(addBtn) {
-            addBtn.addEventListener('click', () => {
-                let nameVal = nameInput.value;
-                let typeVal = typeSelect.value;
-                if(addResource(nameVal, typeVal)) {
-                    nameInput.value = '';
-                    alert(`✨ 成功添加“${nameVal}”，现在展示在资源库最上方！`);
-                }
-            });
-        }
-    }
-
-    // 导航平滑滚动
-    function initScrollNav() {
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
+        // 导航平滑滚动
+        document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', (e) => {
                 const hash = link.getAttribute('href');
-                if(hash && hash.startsWith('#')) {
+                if (hash && hash.startsWith('#')) {
                     e.preventDefault();
                     const target = document.querySelector(hash);
-                    if(target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
-    }
-
-    // 初始化整个网站
-    function init() {
-        loadFromStorage();
-        renderResources();
-        bindFilters();
-        bindUpload();
-        initScrollNav();
-        // 确保联系方式也能点击导航栏的“联系老师”
-        const contactNav = document.querySelector('.nav-links .btn-outline');
-        if(contactNav) {
-            contactNav.addEventListener('click', (e) => {
+        const contactBtn = document.querySelector('.nav-links .btn-outline');
+        if (contactBtn) {
+            contactBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const contactSection = document.getElementById('contact');
-                if(contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
             });
         }
     }
